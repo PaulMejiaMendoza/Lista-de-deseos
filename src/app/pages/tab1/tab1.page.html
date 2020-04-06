@@ -7,16 +7,14 @@
 </ion-header>
 
 <ion-content color="dark">
-    <ion-list>
-        <ion-item *ngFor="let lista of deseosService.listas " detail>
-            <ion-label> {{ lista.titulo }} </ion-label>
-        </ion-item>
-    </ion-list>
-    <!--     button fab-->
+    <app-listas [terminada]="false"> </app-listas>
 
+    <!--     button fab-->
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="agregarLista()">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
+
+
 </ion-content>
